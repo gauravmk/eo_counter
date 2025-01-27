@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Days since the Executive Order ...</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script>
+            window.addEventListener('load', () => {
+                console.log('Document loaded');
+                const MS_IN_DAY = 1000 * 60 * 60 * 24;
+                const order_start = new Date('2025-01-20T00:00:00Z'); // Date-time in UTC
+                const days_since = Math.floor((Date.now() - order_start) / MS_IN_DAY);
+                document.getElementById('counter').innerText = days_since;
+            })
+        </script>
+    </head>
+    <body>
+        <div class="container mt-5" style="text-align: center;">
+            <p class="fs-1">It's been <span id="counter"></span> days since the Executive Order</p>
+        </div>
+    </body>
+</html>
